@@ -23,6 +23,7 @@
     <div class="formWrapper">
         <form class='form'>
             <h1>S'enregistrer</h1>
+            <img src="./img/img.png" alt="Form sécurisées">
             <div class="errors"></div>
             <input hidden='hidden' name='register'/>
             <div class="inputblock">
@@ -56,12 +57,12 @@
             <br>
             <a href="./index.php">Vous avez déjà a compte veuillez vous connecter</a>
         </form>
-        <div class="container row">
+        <div class="container">
             <button class="btn btn-primary mt-2" type='submit' style="width: 200px;" onclick="register()">
                 S'enregistrer
             </button>
         </div>
-        <div class="container row">
+        <div class="container">
             <button type="submit" class="btn btn-primary mt-2" onclick="reset('')" style="width: 200px;">
                 Reset
             </button>

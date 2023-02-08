@@ -32,13 +32,12 @@ function login() {
                 url: "./utils.php",
                 data: $('.form').serialize(),
                 success: (data) => {
-                    console.log(data);
                     let response = JSON.parse(data)
                     if (!response['success']) {
                         errorsMsgs = response['errors']
 
                         for (const key in errorsMsgs) {
-                            $(errors).append(errorsMsgs[key])
+                            $(errors).append(errorsMsgs[key] +  '\n')
                             $(errors).css('color', 'red')
                         }
                     } else {
@@ -96,7 +95,7 @@ function register() {
                         errorsMsgs = response['errors']
 
                         for (const key in errorsMsgs) {
-                            $(errors).append(errorsMsgs[key])
+                            $(errors).append(errorsMsgs[key] + '\n')
                             $(errors).css('color', 'red')
                         }
                     } else {

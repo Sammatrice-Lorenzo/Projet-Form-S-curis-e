@@ -28,6 +28,8 @@
 ?>
 
 <div class="container mt-5">
+    <h1>Se connecter</h1>
+    <img src="./img/img.png" alt="Form sécurisées">
     <div class="errors"></div>
     <div class="formWrapper">
         <form class="form text-center">
@@ -41,22 +43,22 @@
             <div class="mb-3" style="width: 300px;">
                 <label for="exampleInputPassword" class="form-label">Mot de passe</label>
                 <input id="password" name="password" type="password"
-                    class="form-control" autocomplete="current-password" required placeholder="Enter mot de passe"
+                    class="form-control" autocomplete="current-password" required placeholder="Entez mot de passe"
                 />
             </div>
         </form>
         <div class="text-center">
-            <div class="container row">
+            <div class="container">
                 <button class="btn btn-primary mt-2" style="width: 200px;" onclick="login()">
                     Se connecter
                 </button>
             </div>
-            <div class="container row">
+            <div class="container">
                 <button type="submit" class="btn btn-primary mt-2" onclick="reset('login')" style="width: 200px;">
                     Reset
                 </button>
             </div>
-            <div class="container row">
+            <div class="container">
                 <a href='./registration.php' type="submit" class="btn btn-primary mt-2" style="width: 200px;">
                     Vous n'avez pas compte ? Veuillez le créer
                 </a>

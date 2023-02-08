@@ -37,15 +37,32 @@ function login(PDO $cnx): array
     session_start();
 
     if (!isset($_SESSION['token'])) {
-        return [
-            'errors' => 'Problème de token veuillez ressayer',
-            'success' => $success
-        ];
+        $errors[] = 'Problème de token veuillez ressayer';
     }
 
     if ($_POST['email'] === "" || $_POST['password'] === "") {
+        $errors[] = 'Vous devez remplir tous les champs !';
+    }
+
+    if (!isset($_POST['email']) || strlen($_POST['email']) > 255 ||
+        !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)
+    ) {
+		$errors[] = 'Votre mail n\'est pas correct';
+
+	} elseif (!checkdnsrr(substr($_POST['email'], strpos($_POST['email'], '@') + 1), 'MX')) {
+		$errors[] = 'Votre mail n\'est pas valide!';
+	}
+
+	if (
+        !isset($_POST['password']) ||
+        !preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[\~?!@#\$%\^&\*])(?=.{8,})/', $_POST['password'])
+    ) {
+		$errors[] = 'Votre mot de passe ne semble pas être dans la norme';
+	}
+
+    if ($errors) {
         return [
-            'errors' => 'Vous devez remplir tous les champs !',
+            'errors' => $errors,
             'success' => $success
         ];
     }

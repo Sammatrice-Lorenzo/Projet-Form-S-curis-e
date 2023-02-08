@@ -10,7 +10,9 @@ include 'utils.php';
  */
 function customValidation(): array
 {
-    session_start();
+    if (!isset($_SESSION)) {
+        session_start();
+    }
 
     if (!isset($_SESSION['token'])) {
         return [
@@ -38,6 +40,12 @@ function customValidation(): array
 
 	if (!isset($_POST['name']) || strlen($_POST['name']) > 255 || !preg_match('/^[a-zA-Z- ]+$/', $_POST['name'])) {
 		$errors[] = 'Votre nom ne correspond pas aux normes';
+	}
+
+	if (!isset($_POST['firstname']) || strlen($_POST['firstname']) > 255 ||
+        !preg_match('/^[a-zA-Z- ]+$/', $_POST['firstname'])
+    ) {
+		$errors[] = 'Votre prénom ne correspond pas aux normes';
 	}
 
 	if (!isset($_POST['email']) || strlen($_POST['email']) > 255 || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {

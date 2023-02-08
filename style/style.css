@@ -4,3 +4,6 @@ body {
 .formWrapper {
     display: inline-block;
 }
+img {
+    width: 100px;
+}
