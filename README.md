@@ -1,9 +1,9 @@
 # Projet Form Sécurisée
 
 Ce projet est en lien avec la sécurité informatique. Il comprend un formulaire de connexion il vérifie si vous êtes enregistrées à la base de données.
-On peut retrouver un formulaire d’enregistrement où on peut créer un nouveau utilisateur.
+On peut retrouver un formulaire d’enregistrement où on peut créer un nouvel utilisateur.
 
-Ces deux formulaires cherches à éviter les failles de sécurité.
+Ces deux formulaires cherchent à éviter les failles de sécurité.
 
 Le projet a été réalisée en PHP 8.2.0 et JS
 ## Installer le projet
@@ -28,7 +28,7 @@ composer install
 - DB_NAME= <"le nom de la base">
 - PORT= <"le port est souvent le 3306">
 
-Voici un example ici (le port peut-être optionnelle cela dépend de votre configuration):
+Voici un exemple ici (le port peut-être optionnelle cela dépend de votre configuration):
 - PASSWORD_BD=
 - USER_NAME=root
 - SERVER=localhost
@@ -38,7 +38,7 @@ Voici un example ici (le port peut-être optionnelle cela dépend de votre confi
 
     <img src='img/env.local.png'>
 
-Voici quelque user et mot de passe pour se connecter : 
+Voici quelque users et mot de passe pour se connecter : 
 - 1
     - Login : lesterhowell@gmail.com
     - Mdp : stz7JGdjnvUky65!
