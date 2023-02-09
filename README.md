@@ -3,7 +3,7 @@
 Ce projet est en lien avec la sécurité informatique. Il comprend un formulaire de connexion il vérifie si vous êtes enregistrées à la base de données.
 On peut retrouver un formulaire d’enregistrement où on peut créer un nouveau utilisateur.
 
-Ces deux formulaires cherches à éviter les faille de sécurité.
+Ces deux formulaires cherches à éviter les failles de sécurité.
 
 Le projet a été réalisée en PHP 8.2.0 et JS
 ## Installer le projet
