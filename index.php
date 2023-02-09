@@ -46,6 +46,9 @@
                     class="form-control" autocomplete="current-password" required placeholder="Entez mot de passe"
                 />
             </div>
+            <button type="reset" class="btn btn-primary mt-2" style="width: 200px;">
+                Reset
+            </button>
         </form>
         <div class="text-center">
             <div class="container">
@@ -54,9 +57,9 @@
                 </button>
             </div>
             <div class="container">
-                <button type="submit" class="btn btn-primary mt-2" onclick="reset('login')" style="width: 200px;">
+                <!-- <button type="submit" class="btn btn-primary mt-2" onclick="reset('login')" style="width: 200px;">
                     Reset
-                </button>
+                </button> -->
             </div>
             <div class="container">
                 <a href='./registration.php' type="submit" class="btn btn-primary mt-2" style="width: 200px;">

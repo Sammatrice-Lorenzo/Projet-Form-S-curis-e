@@ -1,5 +1,11 @@
 # Projet Form Sécurisée
 
+Ce projet est en lien avec la sécurité informatique. Il comprend un formulaire de connexion il vérifie si vous êtes enregistrées à la base de données.
+On peut retrouver un formulaire d’enregistrement où on peut créer un nouveau utilisateur.
+
+Ces deux formulaires cherches à éviter les faille de sécurité.
+
+Le projet a été réalisée en PHP 8.2.0 et JS
 ## Installer le projet
 1) Installer composer https://getcomposer.org/download/
 
@@ -21,3 +27,24 @@ composer install
 - SERVER= <"le nom du serveur">
 - DB_NAME= <"le nom de la base">
 - PORT= <"le port est souvent le 3306">
+
+Voici un example ici (le port peut-être optionnelle cela dépend de votre configuration):
+- PASSWORD_BD=
+- USER_NAME=root
+- SERVER=localhost
+- DB_NAME=db
+- PORT=
+
+
+    <img src='img/env.local.png'>
+
+Voici quelque user et mot de passe pour se connecter : 
+- 1
+    - Login : lesterhowell@gmail.com
+    - Mdp : stz7JGdjnvUky65!
+- 2
+    - Login : luisvongor@gmail.com
+    - Mdp : Rjd83eUdh93W6V!
+- 3
+    - Login : marcleclere@gmail.com
+    - Mdp : G5i2s6e5Vy5xFC!

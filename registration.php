@@ -55,17 +55,17 @@
                 />
             </div>
             <br>
-            <a href="./index.php">Vous avez déjà a compte veuillez vous connecter</a>
+            <button type="reset" class="btn btn-primary mt-2" style="width: 200px;">
+                Reset
+            </button>
+            <br>
         </form>
         <div class="container">
             <button class="btn btn-primary mt-2" type='submit' style="width: 200px;" onclick="register()">
                 S'enregistrer
             </button>
-        </div>
-        <div class="container">
-            <button type="submit" class="btn btn-primary mt-2" onclick="reset('')" style="width: 200px;">
-                Reset
-            </button>
+            <br>
+            <a href="./index.php">Vous avez déjà a compte veuillez vous connecter</a>
         </div>
     </div>
 </body>

@@ -1,17 +1,3 @@
-/**
- * Permet de reset les champs
- */
-function reset(typeForm) {
-    $('#email').val('')
-    $('#password').val('')
-
-    if (typeForm != "login") {
-        $('#name').val('')
-        $('#firstname').val('')
-        $('#confirm-password').val('')
-    }
-}
-
 function login() {
     let errors = $('.errors')
     let msg = ''
@@ -34,7 +20,7 @@ function login() {
                 success: (data) => {
                     let response = JSON.parse(data)
                     if (!response['success']) {
-                        errorsMsgs = response['errors']
+                        let errorsMsgs = response['errors']
 
                         for (const key in errorsMsgs) {
                             $(errors).append(errorsMsgs[key] +  '\n')
@@ -92,7 +78,7 @@ function register() {
                     console.log(data);
                     let response = JSON.parse(data)
                     if (!response['success']) {
-                        errorsMsgs = response['errors']
+                        let errorsMsgs = response['errors']
 
                         for (const key in errorsMsgs) {
                             $(errors).append(errorsMsgs[key] + '\n')
