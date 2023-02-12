@@ -25,6 +25,7 @@
     // Générer un nouveau token
     $token = generateToken();
     $_SESSION['token'] = $token;
+    $_SESSION['token_time'] = time();
 ?>
 
 <div class="container mt-5">
@@ -49,6 +50,7 @@
             <button type="reset" class="btn btn-primary mt-2" style="width: 200px;">
                 Reset
             </button>
+            <input id="token" type="hidden" name="token" value="<?php echo $token;?>">
         </form>
         <div class="text-center">
             <div class="container">
@@ -57,9 +59,6 @@
                 </button>
             </div>
             <div class="container">
-                <!-- <button type="submit" class="btn btn-primary mt-2" onclick="reset('login')" style="width: 200px;">
-                    Reset
-                </button> -->
             </div>
             <div class="container">
                 <a href='./registration.php' type="submit" class="btn btn-primary mt-2" style="width: 200px;">

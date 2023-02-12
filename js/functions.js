@@ -18,6 +18,7 @@ function login() {
                 url: "./utils.php",
                 data: $('.form').serialize(),
                 success: (data) => {
+                    console.log(data);
                     let response = JSON.parse(data)
                     if (!response['success']) {
                         let errorsMsgs = response['errors']

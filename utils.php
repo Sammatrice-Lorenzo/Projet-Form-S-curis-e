@@ -36,7 +36,11 @@ function login(PDO $cnx): array
 
     session_start();
 
-    if (!isset($_SESSION['token'])) {
+    if (!isset($_SESSION['token']) && !isset($_SESSION['token_time']) || !isset($_POST['token'])) {
+        $errors[] = 'Problème de token veuillez ressayer';
+    }
+
+    if (isset($_SESSION['token']) != isset($_POST['token'])) {
         $errors[] = 'Problème de token veuillez ressayer';
     }
 
