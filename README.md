@@ -7,36 +7,21 @@ Ces deux formulaires cherchent à éviter les failles de sécurité.
 
 Le projet a été réalisée en PHP 8.2.0 et JS
 ## Installer le projet
-1) Installer composer https://getcomposer.org/download/
-
-2) Clone le Repository
+1) Clone le Repository
 ```
 git clone https://github.com/Sammatrice-Lorenzo/Projet-Form-Secure.git
 ```
-3) Installer les dépendances  
+2) Il faut modifier dans la page cnx.php les identifiants pour se connecter à la base de donnée (faudra modifier ces variables)
+- $servername
+- $username
+- $password
+- $dbname
+- $port
 
-```
-composer install
-```
+3) Pour run l'application il faut avoir un wamp xamp lamp
 
-4) Pour run l'application il faut avoir un wamp xamp lamp
+4) Une fois que vous avez modifié le fichier cnx.php avec vos identifiants pour vous connecter à votre base de donnée l'application pour être utilisé
 
-5) Il faut ajouter un fichier .env.local à la racine du projet pour ajouter ces variables
-- PASSWORD_BD= <"le password de votre bdd">
-- USER_NAME= <"le username pour se connecter à la bdd">
-- SERVER= <"le nom du serveur">
-- DB_NAME= <"le nom de la base">
-- PORT= <"le port est souvent le 3306">
-
-Voici un exemple ici (le port peut-être optionnelle cela dépend de votre configuration):
-- PASSWORD_BD=
-- USER_NAME=root
-- SERVER=localhost
-- DB_NAME=db
-- PORT=
-
-
-    <img src='img/env.local.png'>
 
 Voici quelque users et mot de passe pour se connecter : 
 - 1

@@ -1,8 +1,8 @@
 <?php
     // Page de connexion avec la bbd
-    $servername = 'db';
+    $servername = 'localhost';
     $username = 'root';
-    $password = 'password';
+    $password = '';
     $dbname = 'formsecure';
     $port = '3306';
 
