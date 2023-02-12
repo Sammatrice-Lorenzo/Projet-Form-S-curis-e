@@ -20,6 +20,14 @@
 	<title>register</title>
 </head>
 <body>
+    <?php
+        include 'utils.php';
+
+        // Générer un nouveau token
+        $token = generateToken();
+        $_SESSION['token'] = $token;
+        $_SESSION['token_time'] = time();
+    ?>
     <div class="formWrapper">
         <form class='form'>
             <h1>S'enregistrer</h1>
@@ -58,6 +66,7 @@
             <button type="reset" class="btn btn-primary mt-2" style="width: 200px;">
                 Reset
             </button>
+            <input id="token" type="hidden" name="token" value="<?php echo $token;?>">
             <br>
         </form>
         <div class="container">

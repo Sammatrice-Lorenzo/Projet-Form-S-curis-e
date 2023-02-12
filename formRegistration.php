@@ -10,11 +10,17 @@ include 'utils.php';
  */
 function customValidation(): array
 {
-    if (!isset($_SESSION)) {
-        session_start();
+    session_start();
+
+    if (!isset($_SESSION['token']) && !isset($_SESSION['token_time']) || !isset($_POST['token'])) {
+        $errors[] = 'Problème de token veuillez ressayer';
+        return [
+            'errors' => 'Problème de token veuillez ressayer',
+            'success' => false
+        ];
     }
 
-    if (!isset($_SESSION['token'])) {
+    if (isset($_SESSION['token']) != isset($_POST['token'])) {
         return [
             'errors' => 'Problème de token veuillez ressayer',
             'success' => false
